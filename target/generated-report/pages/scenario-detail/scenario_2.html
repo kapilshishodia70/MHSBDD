@@ -77,20 +77,20 @@ font-src * data: blob: 'unsafe-inline';"/>
             var chart = new Chart(ctx, {
   "data": {
     "labels": [
-      "com.MHS.testCases.Base.capabilities()",
-      "User is on menu page",
-      "User click on chevorn and select an Title only option",
-      "User should be directed to selected Title only page",
+      "com.MHS.testCases.Base.capabilities(io.cucumber.java.Scenario)",
+      "User is present on the login page",
+      "User provide the credentials",
+      "User see field validation error on Email and password fields",
       "com.MHS.testCases.Base.tearDown()"
     ],
     "datasets": [
       {
         "data": [
-          81,
+          220,
+          3,
           0,
           0,
-          0,
-          9
+          40
         ],
         "backgroundColor": [
           "rgba(40, 167, 69, 1.000)",
@@ -161,7 +161,7 @@ font-src * data: blob: 'unsafe-inline';"/>
         {
           "ticks": {
             "min": 0,
-            "stepSize": 81,
+            "stepSize": 220,
             "display": true
           },
           "stacked": true,
@@ -264,17 +264,17 @@ font-src * data: blob: 'unsafe-inline';"/>
                                 <a class="nav-link " href="pages/feature-summary.html">All Features</a>
                     </li>
             </ul>
-            <span class="text-light">2020-08-26 18:41:12</span>
+            <span class="text-light">2020-09-17 14:24:52</span>
         </div>
     </nav>
     <main role="main" class="container">
         <div class="cluecumber-template">
             <div class="pb-2 mt-4 mb-2 border-bottom">
                     <h5>
-                            <a href="pages/feature-scenarios/feature_0.html">launch app</a>
-                        <span class="small">file:src/test/java/features/launchapp.feature</span>
+                            <a href="pages/feature-scenarios/feature_0.html">MHS mobile app login</a>
+                        <span class="small">file:src/test/java/features/MHSLogin.feature</span>
                     </h5>
-                    <h3>selecting menus</h3>
+                    <h3>Login without email and password</h3>
             </div>
 
     <div class="row" id="scenario-detail">
@@ -292,9 +292,9 @@ font-src * data: blob: 'unsafe-inline';"/>
         <div class="card h-100">
                 <div class="card-header">Scenario Info</div>
             <div class="card-body">
-                <li class="list-group-item">Started on:<br>2020-08-26 18:39:40</li>
-                <li class="list-group-item">Ended on:<br>2020-08-26 18:41:11</li>
-            <li class="list-group-item">Test Runtime:<br>1m 30s 984ms</li>
+                <li class="list-group-item">Started on:<br>2020-09-17 14:15:47</li>
+                <li class="list-group-item">Ended on:<br>2020-09-17 14:20:13</li>
+            <li class="list-group-item">Test Runtime:<br>4m 25s 642ms</li>
             <li class="list-group-item">            </li>
             </div>
         </div>
@@ -309,15 +309,15 @@ font-src * data: blob: 'unsafe-inline';"/>
 
                 </li>
                 <li class="list-group-item">
-                    3 passed     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
+                    1 passed     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
        title="passed"><span style="display:none">passed</span></i>
 
                     <br>
-                    0 failed     <i class="color-failed cluecumber-icon icon-failed" data-toggle="tooltip"
+                    1 failed     <i class="color-failed cluecumber-icon icon-failed" data-toggle="tooltip"
        title="failed"><span style="display:none">failed</span></i>
 
                     <br>
-                    0 skipped     <i class="color-skipped cluecumber-icon icon-skipped" data-toggle="tooltip"
+                    1 skipped     <i class="color-skipped cluecumber-icon icon-skipped" data-toggle="tooltip"
        title="skipped"><span style="display:none">skipped</span></i>
 
                 </li>
@@ -325,6 +325,10 @@ font-src * data: blob: 'unsafe-inline';"/>
                 <button class="btn btn-outline-secondary btn-block collapsed" type="button" data-toggle="collapse"
                         aria-expanded="true" data-cluecumber-item="before-after-hooks-button"
                         data-target=".scenarioHook">Scenario Hooks
+                </button>
+                <button class="btn btn-outline-secondary btn-block collapsed" type="button" data-toggle="collapse"
+                        aria-expanded="true" data-cluecumber-item="step-hooks-button"
+                        data-target=".stepHook">Step Hooks
                 </button>
             </div>
         </div>
@@ -340,10 +344,10 @@ font-src * data: blob: 'unsafe-inline';"/>
                         <div class="row row_passed table-row-passed">
                             <div class="col-1 text-left small">1.</div>
                             <div class="col-8 text-left">
-                                <i>com.MHS.testCases.Base.capabilities()</i>
+                                <i>com.MHS.testCases.Base.capabilities(io.cucumber.java.Scenario)</i>
                             </div>
                             <div class="col-2 text-left small">
-                                1m 21s 596ms
+                                3m 40s 506ms
                             </div>
                             <div class="col-1 text-right">
     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
@@ -361,62 +365,203 @@ font-src * data: blob: 'unsafe-inline';"/>
             <div class="card-body">
                 <li class="list-group-item">
 
+        <div class="stepHook collapse">
+            <div class="row row_passed table-row-passed">
+                <div class="col-1"></div>
+                <div class="col-8 text-left">
+                    <i>com.MHS.testCases.Base.step()</i>
+                </div>
+                <div class="col-2 text-left small">
+                    <span class="nobr">0m 00s 001ms</span>
+                </div>
+                <div class="col-1 text-right">
+    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
+       title="passed"><span style="display:none">passed</span></i>
+                </div>
+        <div class="row w-100 p-3 m-0 scenarioOutput">
+            <div class="w-100 text-left small p-2">Custom message before step is executed for scenarioLogin without email and password</div>
+        </div>
+            </div>
+        </div>
 
                         <div class="row row_passed table-row-passed">
                             <div class="col-1 text-left small">1.</div>
                             <div class="col-8 text-left">
-                                <span data-toggle="tooltip" title="com.MHS.testCases.SelectMenu.user_is_on_menu_page()">
-                                    <a href="pages/step-scenarios/step_029170365.html"><span
-                                                class="keyword">Given </span> User is on menu page</a>
+                                <span data-toggle="tooltip" title="com.MHS.testCases.LoginMHS.user_is_present_on_the_login_page()">
+                                    <a href="pages/step-scenarios/step_01021891921.html"><span
+                                                class="keyword">Given </span> User is present on the login page</a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 03s 760ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
+       title="passed"><span style="display:none">passed</span></i>
+                            </div>
+
+                        </div>
+        <div class="stepHook collapse">
+            <div class="row row_passed table-row-passed">
+                <div class="col-1"></div>
+                <div class="col-8 text-left">
+                    <i>com.MHS.testCases.Base.stepAfter()</i>
+                </div>
+                <div class="col-2 text-left small">
+                    <span class="nobr">0m 00s 629ms</span>
+                </div>
+                <div class="col-1 text-right">
+    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
+       title="passed"><span style="display:none">passed</span></i>
+                </div>
+        <div class="row w-100 p-3 m-0 scenarioOutput">
+            <div class="w-100 text-left small p-2">Screenshot of app after the Login without email and password scenario</div>
+        </div>
+            <div class="row w-100 p-3 m-0 scenarioAttachment">
+                    <div class="w-100 p-1 m-0 border-bottom small text-left">scr2020.09.17.14.19.32</div>
+                <div class="w-100 text-left m-auto">
+                        <a class="grouped_elements" rel="images" href="attachments/attachment003.png">
+                            <img src="attachments/attachment003.png" style="max-width: 50%"
+                                 alt="Attachment attachment003.png"/>
+                        </a>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <div class="stepHook collapse">
+            <div class="row row_passed table-row-passed">
+                <div class="col-1"></div>
+                <div class="col-8 text-left">
+                    <i>com.MHS.testCases.Base.step()</i>
+                </div>
+                <div class="col-2 text-left small">
+                    <span class="nobr">0m 00s 001ms</span>
+                </div>
+                <div class="col-1 text-right">
+    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
+       title="passed"><span style="display:none">passed</span></i>
+                </div>
+        <div class="row w-100 p-3 m-0 scenarioOutput">
+            <div class="w-100 text-left small p-2">Custom message before step is executed for scenarioLogin without email and password</div>
+        </div>
+            </div>
+        </div>
+
+                        <div class="row row_failed table-row-failed">
+                            <div class="col-1 text-left small">2.</div>
+                            <div class="col-8 text-left">
+                                <span data-toggle="tooltip" title="com.MHS.testCases.LoginMHS.user_provide_the_credentials(io.cucumber.datatable.DataTable)">
+                                    <a href="pages/step-scenarios/step_01402103973.html"><span
+                                                class="keyword">When </span> User provide the credentials</a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 00s 003ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-failed cluecumber-icon icon-failed" data-toggle="tooltip"
+       title="failed"><span style="display:none">failed</span></i>
+                            </div>
+
+                                <div class="row w-100 p-3 m-0 scenarioDataTable">
+                                    <div class="w-100 text-left border border-dark table-responsive">
+                                        <table class="table table-hover small table-striped text-left pb-0">
+                                                <tr>
+                                                        <td>Email</td>
+                                                </tr>
+                                                <tr>
+                                                        <td></td>
+                                                </tr>
+                                        </table>
+                                    </div>
+                                </div>
+        <div class="row w-100 p-3 m-0 scenarioErrorMessage">
+            <div class="w-100 text-left border border-danger">
+                <pre class="text-danger small p-2">java.lang.NullPointerException
+	at dataProviders.JsonDataProvider.getLoginByEmail(JsonDataProvider.java:51)
+	at com.MHS.testCases.LoginMHS.user_provide_the_credentials(LoginMHS.java:57)
+	at &#226;&#339;&#189;.User provide the credentials(<a href='file:///C:/Users/kapsisod/Box%20Sync/POC-NHSMHS/workspace/Android/src/test/java/features/MHSLogin.feature:11)' target='_blank'>file:///C:/Users/kapsisod/Box%20Sync/POC-NHSMHS/workspace/Android/src/test/java/features/MHSLogin.feature:11)</a>
+</pre>
+            </div>
+        </div>
+                        </div>
+        <div class="stepHook collapse">
+            <div class="row row_passed table-row-passed">
+                <div class="col-1"></div>
+                <div class="col-8 text-left">
+                    <i>com.MHS.testCases.Base.stepAfter()</i>
+                </div>
+                <div class="col-2 text-left small">
+                    <span class="nobr">0m 00s 705ms</span>
+                </div>
+                <div class="col-1 text-right">
+    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
+       title="passed"><span style="display:none">passed</span></i>
+                </div>
+        <div class="row w-100 p-3 m-0 scenarioOutput">
+            <div class="w-100 text-left small p-2">Screenshot of app after the Login without email and password scenario</div>
+        </div>
+            <div class="row w-100 p-3 m-0 scenarioAttachment">
+                    <div class="w-100 p-1 m-0 border-bottom small text-left">scr2020.09.17.14.19.32</div>
+                <div class="w-100 text-left m-auto">
+                        <a class="grouped_elements" rel="images" href="attachments/attachment004.png">
+                            <img src="attachments/attachment004.png" style="max-width: 50%"
+                                 alt="Attachment attachment004.png"/>
+                        </a>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <div class="stepHook collapse">
+            <div class="row row_skipped table-row-skipped">
+                <div class="col-1"></div>
+                <div class="col-8 text-left">
+                    <i>com.MHS.testCases.Base.step()</i>
+                </div>
+                <div class="col-2 text-left small">
+                    <span class="nobr">0m 00s 000ms</span>
+                </div>
+                <div class="col-1 text-right">
+    <i class="color-skipped cluecumber-icon icon-skipped" data-toggle="tooltip"
+       title="skipped"><span style="display:none">skipped</span></i>
+                </div>
+            </div>
+        </div>
+
+                        <div class="row row_skipped table-row-skipped">
+                            <div class="col-1 text-left small">3.</div>
+                            <div class="col-8 text-left">
+                                <span data-toggle="tooltip" title="com.MHS.testCases.LoginMHS.user_see_field_validation_error_on_email_and_password_fields()">
+                                    <a href="pages/step-scenarios/step_1400889993.html"><span
+                                                class="keyword">But </span> User see field validation error on Email and password fields</a>
                                 </span>
                             </div>
                             <div class="col-2 text-left small">
                                 0m 00s 000ms
                             </div>
                             <div class="col-1 text-right">
-    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
-       title="passed"><span style="display:none">passed</span></i>
+    <i class="color-skipped cluecumber-icon icon-skipped" data-toggle="tooltip"
+       title="skipped"><span style="display:none">skipped</span></i>
                             </div>
 
                         </div>
-
-
-                        <div class="row row_passed table-row-passed">
-                            <div class="col-1 text-left small">2.</div>
-                            <div class="col-8 text-left">
-                                <span data-toggle="tooltip" title="com.MHS.testCases.SelectMenu.user_click_on_chevorn_and_select_an_option(java.lang.String)">
-                                    <a href="pages/step-scenarios/step_1898237049.html"><span
-                                                class="keyword">When </span> User click on chevorn and select an <span class="parameter">Title only</span> option</a>
-                                </span>
-                            </div>
-                            <div class="col-2 text-left small">
-                                0m 00s 001ms
-                            </div>
-                            <div class="col-1 text-right">
-    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
-       title="passed"><span style="display:none">passed</span></i>
-                            </div>
-
-                        </div>
-
-
-                        <div class="row row_passed table-row-passed">
-                            <div class="col-1 text-left small">3.</div>
-                            <div class="col-8 text-left">
-                                <span data-toggle="tooltip" title="com.MHS.testCases.SelectMenu.user_should_be_directed_to_selected_page(java.lang.String)">
-                                    <a href="pages/step-scenarios/step_0181719664.html"><span
-                                                class="keyword">Then </span> User should be directed to selected <span class="parameter">Title only</span> page</a>
-                                </span>
-                            </div>
-                            <div class="col-2 text-left small">
-                                0m 00s 001ms
-                            </div>
-                            <div class="col-1 text-right">
-    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
-       title="passed"><span style="display:none">passed</span></i>
-                            </div>
-
-                        </div>
+        <div class="stepHook collapse">
+            <div class="row row_skipped table-row-skipped">
+                <div class="col-1"></div>
+                <div class="col-8 text-left">
+                    <i>com.MHS.testCases.Base.stepAfter()</i>
+                </div>
+                <div class="col-2 text-left small">
+                    <span class="nobr">0m 00s 000ms</span>
+                </div>
+                <div class="col-1 text-right">
+    <i class="color-skipped cluecumber-icon icon-skipped" data-toggle="tooltip"
+       title="skipped"><span style="display:none">skipped</span></i>
+                </div>
+            </div>
+        </div>
                 </li>
             </div>
         </div>
@@ -434,7 +579,7 @@ font-src * data: blob: 'unsafe-inline';"/>
                                     <i>com.MHS.testCases.Base.tearDown()</i>
                                 </div>
                                 <div class="col-2 text-left small">
-                                    0m 09s 386ms
+                                    0m 40s 037ms
                                 </div>
                                 <div class="col-1 text-right">
     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
@@ -452,7 +597,7 @@ font-src * data: blob: 'unsafe-inline';"/>
 
 <footer class="footer navbar-dark">
     <div class="container-fluid">
-        <span>Cluecumber Report Plugin version 2.5.0 - Report generated on 2020-08-26 18:41:12.</span>
+        <span>Cluecumber Report Plugin version 2.5.0 - Report generated on 2020-09-17 14:24:52.</span>
     </div>
 </footer>    </body>
     </html>

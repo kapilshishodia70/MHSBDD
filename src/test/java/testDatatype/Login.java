@@ -1,8 +1,8 @@
 package testDatatype;
 
 public class Login {
-	public String emailId;
-	public String password;
+	public String Emailid;
+	public String Password;
 }
 
 

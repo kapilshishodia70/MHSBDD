@@ -1,6 +1,7 @@
 package com.MHS.testCases;
 
 import com.MHS.PageObjects.GeneralStoreHomePage;
+import com.MHS.PageObjects.LoginPage;
 import com.MHS.PageObjects.ProductsPage;
 
 import io.appium.java_client.android.AndroidDriver;
@@ -18,13 +19,13 @@ public class GeneralStoreHome {
 	
 	Base base;
 	AndroidDriver<AndroidElement> driver;
-	Actions action;
+	ReusableActions action;
 	Scenario scenario;
 	
 	public GeneralStoreHome(Base base)
 	{
 		this.base= base;
-		this.action=new Actions(this.base);
+		this.action=new ReusableActions(this.base);
 		scenario=base.scenario;
 	}
 	
@@ -32,8 +33,11 @@ public class GeneralStoreHome {
 	 @Given("^User is on general store home page$")
 	    public void user_is_on_general_store_home_page() {
 		 
-		 GeneralStoreHomePage GShomePg= new GeneralStoreHomePage(base);
-		 boolean flag= GShomePg.titleDispalyed();
+		// GeneralStoreHomePage GShomePg= new GeneralStoreHomePage(base);
+		 LoginPage logPg= new LoginPage(base);
+		 
+		// boolean flag= GShomePg.titleDispalyed();
+		 boolean flag = logPg.headerDisplayed();
 		 assertTrue(flag);
 		 
 	        

@@ -27,7 +27,7 @@ public class LauchApp {
 	
 	Base base;
 	AndroidDriver<AndroidElement> driver;
-	Actions action;
+	ReusableActions action;
 	//Scenario scenario;
 	
 	
@@ -35,7 +35,7 @@ public class LauchApp {
 		
 		
 		this.base = base;
-		this.action= new Actions(this.base); 
+		this.action= new ReusableActions(this.base); 
 		//this.scenario =base.scenario;
 	}
 	

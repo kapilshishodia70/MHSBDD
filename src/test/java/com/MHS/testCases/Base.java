@@ -61,13 +61,17 @@ public class Base {
 		//use only if using browser in android mobile
 		//cap.setCapability(MobileCapabilityType.BROWSER_NAME, "chrome");
 		//use if apk not avaialble
-		if(apkFile.getAbsolutePath()== null || apkFile.getAbsolutePath().trim().isEmpty())
+		if(apkFile.getAbsolutePath()== null || !(apkFile.getAbsolutePath().trim().isEmpty()))
 		{
-		cap.setCapability("appPackage", prop.getProperty("android.app.packageName"));
-		cap.setCapability("appActivity", prop.getProperty("android.app.activityName"));
+			System.out.println("apk path not found looking for apackage name and activity name");
+		
+			cap.setCapability(MobileCapabilityType.APP, apkFile.getAbsolutePath());
+			cap.setCapability("appPackage", prop.getProperty("android.app.packageName"));
+		    cap.setCapability("appActivity", prop.getProperty("android.app.activityName"));
 		}
 		else
 		{
+			System.out.println("APK path found ");
 			cap.setCapability(MobileCapabilityType.APP, apkFile.getAbsolutePath());
 		}
 		cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, "uiautomator2");
@@ -112,7 +116,7 @@ public class Base {
 	public void step()
 	{
 		//System.out.println("the name of the scenario is : " +scenario.getName());
-		scenario.log("Custom message before step is executed for scenario"+ scenario.getName());
+		//scenario.log("Custom message before step is executed for scenario"+ scenario.getName());
 		
 		
 	}

@@ -12,7 +12,7 @@ import com.google.gson.Gson;
 import testDatatype.Login;
 
 public class JsonDataProvider {
-	private final String loginDataPath= "src\\test\\resources\\givebloodtestdata.json";
+	private  String jsonDataPath;
 	private List<Login> LoginList;
 	/**
 	 * @param loginList
@@ -23,15 +23,19 @@ public class JsonDataProvider {
 	}
 	private List<Login> getLoginData() {
 		// TODO Auto-generated method stub
+		jsonDataPath= "src\\test\\resources\\givebloodtestdata.json";
 		Gson gson =new Gson();
 		BufferedReader bufferReader = null;
 		try {
-			bufferReader = new BufferedReader(new FileReader(loginDataPath));
+			bufferReader = new BufferedReader(new FileReader(jsonDataPath));
+			System.out.println("buffer reader initialised");
 			Login[] login = gson.fromJson(bufferReader, Login[].class);
+			System.out.println("eturning array as list");
 			return Arrays.asList(login);
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
-			throw new RuntimeException("Json file not found at path : " + loginDataPath);
+			System.out.println("json file not found");
+			throw new RuntimeException("Json file not found at path : " + jsonDataPath);
 		}
 		finally {
 			try{if(bufferReader!= null)
@@ -48,7 +52,9 @@ public class JsonDataProvider {
 		//return LoginList.stream().filter(x->x.emailId.equalsIgnoreCase(email)).findAny().get();
 		//normal method
 		for(Login login : LoginList) {
-			if(login.emailId.equalsIgnoreCase(email))
+			System.out.println(login);
+			System.out.println(login.Emailid + " "+ login.Password);
+			if(login.Emailid.equalsIgnoreCase(email))
 				return login;
 		}
 		return null;

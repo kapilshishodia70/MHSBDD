@@ -1,5 +1,5 @@
 [{
-"Emailid" : "juser1@yopmail.com",
+"Emailid" : "testpatient@yopmail.com",
 "Password" : "Strong@129"
 },
 {
@@ -9,5 +9,17 @@
 {
 "Emailid" : "lgeor3399@yopmail.com",
 "Password" : "Strong@129"
+},
+{
+"Emailid" : "-",
+"Password" : "-"
+},
+{
+"Emailid" : "kapil",
+"Password" : "Strong@129"
+},
+{
+"Emailid" : "testPatient@yopmail.com",
+"Password" : "Strong"
 }
 ]

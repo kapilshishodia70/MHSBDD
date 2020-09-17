@@ -27,6 +27,7 @@ public class BasePO {
 	
 	private void initElements() 
 	{
+		System.out.println("initialiaing page factory elements");
 		PageFactory.initElements(new AppiumFieldDecorator(sharedDriver, Duration.ofSeconds(IMPLICIT_WAIT)), this);
 		
 	}
