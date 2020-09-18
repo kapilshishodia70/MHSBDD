@@ -5,3 +5,5 @@ Feature: Scenarios feature file
 
   Scenario: Scenario Number Two
     Given Step from 'Scenario 2' in 'scenarios' feature file
+	
+	#adding comment
