@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: Sign up for the MHS App
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 168.885 s - in Sign up for the MHS App

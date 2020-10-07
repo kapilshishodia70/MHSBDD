@@ -1,18 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="161.479">
-<testcase classname="MHS mobile app login" name="Login with invalid credential" time="161.225">
-<failure message="expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[Given User is present on the login page.....................................passed
-When User provide the credentials...........................................passed
-But User see field validation error on Email and password fields............failed
-
-StackTrace:
-java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:99)
-	at org.testng.Assert.failNotEquals(Assert.java:1037)
-	at org.testng.Assert.assertTrue(Assert.java:45)
-	at org.testng.Assert.assertTrue(Assert.java:55)
-	at com.MHS.testCases.LoginMHS.user_see_field_validation_error_on_email_and_password_fields(LoginMHS.java:130)
-	at ✽.User see field validation error on Email and password fields(file:///C:/Users/kapsisod/Box%20Sync/POC-NHSMHS/workspace/Android/src/test/java/features/MHSLogin.feature:21)
-]]></failure>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="242.182">
+<testcase classname="Forgot password for reseting the password of registered user." name="Reseting password from login page." time="241.668">
+<system-out><![CDATA[Given User is present on the login page.....................................passed
+And user clicks on  Forgot password link....................................passed
+When user enter the toddjoyce@yopmail.com on Forgot password page and click submit button..passed
+And user provide the otp 1234 , new password Strong@321 and confirm password Strong@321 on password reset page and click on Submit button.passed
+Then an alert stating password changed should be displayed with message as Password reset Successfully, Please login again.passed
+And User should be able to Login with email toddjoyce@yopmail.com and changed password Strong@321 succesfully..passed
+]]></system-out>
 </testcase>
 </testsuite>

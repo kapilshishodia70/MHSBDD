@@ -123,7 +123,7 @@ public class LoginPage extends BasePO {
 		return validationMsg;
 	}
 
-	@SuppressWarnings({ "unchecked", "null" })
+	
 	public ArrayList<Object> passwordFieldvalidation() {
 		String validationMsg = "";
 		boolean flag=false;

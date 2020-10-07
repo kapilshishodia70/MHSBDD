@@ -41,6 +41,7 @@ public class LoginMHS {
 	}
 	
 	@Given("^User is present on the login page$")
+	
     public void user_is_present_on_the_login_page() {
 		LoginPage lpg = new LoginPage(base);
 		boolean flag= lpg.headerDisplayed();
@@ -73,6 +74,7 @@ public class LoginMHS {
     		else
     		{
     			lpg.enterPassword(password);
+    			lpg.showPassword(password);
     			String shownPassword= driver.findElement(By.xpath("//android.widget.EditText[@text='"+password+"']")).getText();
     			scenario.log("clicking on show password icon displays password as : "+shownPassword);
     			lpg.clickLogin();
@@ -120,7 +122,7 @@ public class LoginMHS {
     	if(!password.matches("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&-+=()])(?=\\S+$).{8,20}$"))
     	{
     	System.out.println("wrong pattern of password ");
-    	scenario.log("'"+lpg.passwordFieldvalidation()+"'  message is found below password field");
+    	scenario.log("'"+lpg.passwordFieldvalidation().get(1)+"'  message is found below password field");
     	}
     	else if(password.matches("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&-+=()])(?=\\S+$).{8,20}$"))
     	{

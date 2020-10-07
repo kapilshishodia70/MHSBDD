@@ -1,5 +1,7 @@
 package com.MHS.PageObjects;
 
+import org.openqa.selenium.NoSuchElementException;
+
 import com.MHS.testCases.Base;
 
 import io.appium.java_client.android.AndroidElement;
@@ -24,8 +26,16 @@ public class DashboardPage extends BasePO {
 	
 	public String verifyDashboardScreen()
 	{
+		String dashboardmsg= "";
+		try {
 		dashboardScrMsg.isDisplayed();
-		String dashboardmsg=dashboardScrMsg.getText();
+		dashboardmsg=dashboardScrMsg.getText();
+		}
+		catch(NoSuchElementException ne)
+		{
+		 ne.printStackTrace();
+		 
+		}
 		return dashboardmsg;
 	}
 	

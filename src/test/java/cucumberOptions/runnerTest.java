@@ -11,7 +11,7 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions
-(features="src\\test\\java\\features",
+(features="src\\test\\java\\features\\ForgotPassword.feature",
 glue = "com.MHS.testCases",strict =true, monochrome =true,
 plugin= {"pretty","json:target/cucumber-report/cucumber.json","junit:target/cucumber.xml","html:target/cucumber-report/cucumber.html"
 		 , "rerun:rerun/failed_scenarios.txt"}
